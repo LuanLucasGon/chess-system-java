@@ -47,7 +47,7 @@ public class Pawn extends ChessPiece {
                 moveMat[positionAux.getRow()][positionAux.getColumn()] = true;
             }
             positionAux.setValues(position.getRow() + 2, position.getColumn());
-            Position p2 = new Position(position.getRow() - 1, position.getColumn());
+            Position p2 = new Position(position.getRow() + 1, position.getColumn());
             if (getBoard().positionExists(positionAux) && !getBoard().thereIsAPiece(positionAux) && getBoard().positionExists(p2) && !getBoard().thereIsAPiece(p2) && getMoveCount() == 0) {
                 moveMat[positionAux.getRow()][positionAux.getColumn()] = true;
             }
