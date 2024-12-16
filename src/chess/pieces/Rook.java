@@ -23,11 +23,11 @@ public class Rook extends ChessPiece {
 
         //above
         positionAux.setValues(position.getRow() - 1, position.getColumn());
-        while(getBoard().positionExists(positionAux) && !getBoard().thereIsAPiece(positionAux)){
+        while (getBoard().positionExists(positionAux) && !getBoard().thereIsAPiece(positionAux)) {
             moveMat[positionAux.getRow()][positionAux.getColumn()] = true;
             positionAux.setRow(positionAux.getRow() - 1);
         }
-        if(getBoard().positionExists(positionAux) && isThereOpponentPiece(positionAux)){
+        if (getBoard().positionExists(positionAux) && isThereOpponentPiece(positionAux)) {
             moveMat[positionAux.getRow()][positionAux.getColumn()] = true;
         }
 
