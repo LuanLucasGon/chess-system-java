@@ -17,7 +17,7 @@ public class Main {
         ChessMatch chessMatch = new ChessMatch();
         List<ChessPiece> capturedPieces = new ArrayList<>();
 
-        while(true){
+        while(!chessMatch.getCheckMate()){
             try{
                 UI.clearScreen();
                 UI.printMatch(chessMatch, capturedPieces);
@@ -42,6 +42,7 @@ public class Main {
                 scanner.nextLine();
             }
         }
-
+        UI.clearScreen();
+        UI.printMatch(chessMatch, capturedPieces);
     }
 }
